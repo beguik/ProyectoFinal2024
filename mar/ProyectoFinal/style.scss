@@ -106,9 +106,10 @@ $posicion: flex;
     transform: translateX(-10px);
 }
 
-/* .login{
-    @include estructura(flex,center);
-} */
+.login{
+  //  @include estructura(block,center);
+  text-align: center;
+}
 
 .divloggeo {
     position: absolute;

@@ -99,9 +99,10 @@
   transform: translateX(-10px);
 }
 
-/* .login{
-    @include estructura(flex,center);
-} */
+.login {
+  text-align: center;
+}
+
 .divloggeo {
   position: absolute;
   top: 50%;

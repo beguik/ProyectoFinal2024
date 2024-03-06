@@ -13,7 +13,7 @@
     <title>MalagApp</title>
 </head>
 
-<body class="body">
+<body>
 
     <div class="divloggeo">
         <div class="login">
