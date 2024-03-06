@@ -1,9 +1,18 @@
 "use strict";
 
+var divLogo = document.getElementById('logo');
+var loginBtn = document.getElementById('login');
+var registroBtn = document.getElementById('registro');
+
 document.addEventListener('DOMContentLoaded', function () {
 
-    var divLogo = document.getElementById('logo');
-    divLogo.addEventListener('click', mostrarMenu);
+    divLogo.addEventListener('click', function(){mostrarMenu()});
+    loginBtn.addEventListener('click', function(){
+        window.location.href = 'login.php';
+    });
+    registroBtn.addEventListener('click', function(){
+        window.location.href = 'registrarse.php';
+    })
 
 });
 

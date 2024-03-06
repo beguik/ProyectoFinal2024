@@ -13,10 +13,10 @@
     <title>MalagApp</title>
 </head>
 
-<body>
+<body class="body">
 
-    <div style="display: flex; justify-content:center;">
-        <div id="loggeo">
+    <div class="divloggeo">
+        <div class="login">
             <h2>Inicia Sesion</h2>
             <div id="contenidoBlog">
                 <form method="post" action="funcionesInicioSesion.php">
@@ -26,7 +26,7 @@
                     <label for="contrasena">Contraseña:</label>
                     <input type="password" name="contrasena" id="contrasena"><br><br>
 
-                    <input type="submit" value="iniciarSesion">
+                    <input type="submit" value="iniciarSesion" class="btn btn-dark">
                 </form>
             </div>
         </div>

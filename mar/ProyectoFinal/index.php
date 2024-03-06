@@ -13,7 +13,7 @@
     <title>MalagApp</title>
 </head>
 
-<body>
+<body class="body">
 
     <div class="usuario">
 
@@ -24,8 +24,8 @@
         <h1>¡Bienvenidx a MalagApp!</h1>
 
         <div>
-            <input type="button" class="btn btn-outline-dark" value="Login">
-            <input type="button" class="btn btn-dark" value="Registrarse">
+            <input type="button" class="btn btn-outline-dark" value="Login" id="login">
+            <input type="button" class="btn btn-dark" value="Registrarse" id="registro">
         </div>
     </div>
 
