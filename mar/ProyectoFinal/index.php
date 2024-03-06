@@ -52,6 +52,7 @@
         </div>
     </div>
 
+        <!-- Footer -->
     <footer class="footer">
         <p>informacion footer</p>
     </footer>
