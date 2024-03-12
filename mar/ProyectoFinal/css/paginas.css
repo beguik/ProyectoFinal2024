@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Aladin";
+  src: url("/Aladin-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Viga";
+  src: url("/Viga-Regular.ttf") format("truetype");
+}
+.festividades {
+  background-image: url("./img/fondo2.jpg");
+  background-size: cover;
+  font-family: "Viga";
+  margin: 0;
+  padding: 0;
+}
+
+.titulo {
+  padding-top: 50px;
+  justify-content: center;
+  display: flex;
+}
+
+.titulo > h1 {
+  font-family: "Aladin";
+  font-size: 400%;
+  color: aliceblue;
+  animation: aparecer 5s forwards;
+  opacity: 0;
+}
+
+.titulo {
+  position: relative;
+}
+
+#juego {
+  position: absolute;
+  top: -21%;
+  right: 20px;
+}
+
+#juego > img {
+  width: 270px;
+  height: 240px;
+  text-align: center;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+#juego > img:hover {
+  width: 320px;
+  height: 300px;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 2;
+  }
+}
+.logo {
+  background-color: rgba(98, 137, 182, 0.192);
+  border-radius: 100%;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 20%;
+  left: 25px;
+}
+
+.logo:hover {
+  background-color: rgba(41, 77, 155, 0.377);
+  border: 2px solid rgb(34, 38, 100);
+}
+
+.logo > img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=paginas.css.map */

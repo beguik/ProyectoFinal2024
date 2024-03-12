@@ -1,19 +1,24 @@
 $alineacion:center;
 $posicion: flex;
-$fuenteTexto: nth('Arial, sans-serif','"Aladin", system-ui','"Viga", sans-serif');
+$fuenteTexto: nth('Arial, sans-serif','Aladin, system-ui','Viga, sans-serif');
+$max: 100%;
 
 @mixin estructura($posicion,$alineacion){
     display: $posicion;
     justify-content: $alineacion;
 }
 
-body{
+.body{
     font-family: $fuenteTexto(0);
     background: linear-gradient(to bottom right, #5C0000, #9E1717);
-    width: 100%;
-    height: 100%;
+    width: $max;
+    height: $max;
     margin: 0;
     padding: 0;
+}
+
+.usuario{
+    @include estructura(flex, space-between);
 }
 
 .titulo{
@@ -44,7 +49,7 @@ body{
 
 .logo{
     background-color: rgba(155, 52, 52, 0.801);
-    border-radius: 100%;
+    border-radius: $max;
     width: 350px;
     height: 350px;
     position: absolute;
@@ -69,7 +74,7 @@ body{
     margin-top: 50%;
     padding-top: auto;
     border: 2px solid rgba(155, 52, 52, 0.685);
-    border-radius: 100%;
+    border-radius: $max;
     text-align: center;
     color: aliceblue;
     background-color: rgba(155, 52, 52, 0.801);
@@ -142,31 +147,19 @@ h2, .loginTexto, .btn, #login, #registro{
     font-style: italic;
 }
 
+/*
+    Estilos para página de festividades
+*/
 
 
+/*
+    Estilos para el footer
+*/
 
-/* .pinchar {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: moverTexto 5s linear infinite alternate;
-    white-space: nowrap;
-}
-
-@keyframes moverTexto {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
- */
 .footer{
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: $max;
     background-color:rgba(255, 255, 255, 0.144);
     border-top: 1px solid #ccc;
     box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.007);
@@ -180,3 +173,44 @@ h2, .loginTexto, .btn, #login, #registro{
     margin-top: 10px;
 }
 
+/*
+    Media Query
+*/
+/*$pantallaMovil: 600px;
+$pantallaPc: 992px;
+
+@media screen and (max-width: $pantallaMovil) {
+  body {
+    width: auto;
+    height: auto; 
+  }
+
+  .titulo > h1 {
+    font-size: 200%; 
+    margin-left: 10%;
+  }
+
+  .logo {
+    left: 5%;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+ @media screen and (min-width: $pantallaPc) {
+  body {
+    width: $max;
+    height: $max;
+  }
+
+  .titulo > h1 {
+    font-size: 400%;
+    margin-left: 38%;
+  }
+
+  .logo {
+    left: 23%;
+    width: 350px;
+    height: 350px;
+  }
+} */
