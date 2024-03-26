@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('partidas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("id_usuario");
+            $table->string('nombre')->unique();
             $table->integer("num_aciertos");
             $table->integer("num_fallados");
             $table->integer("num_sin_contestar");
             $table->timestamps();
-            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
+            
         });
     }
 

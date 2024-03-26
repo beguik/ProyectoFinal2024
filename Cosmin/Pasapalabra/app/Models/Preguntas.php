@@ -11,7 +11,7 @@ class Preguntas extends Model
 
     public function partidas()
     {
-        return $this->belongsTo(Partidas::class);
+        return $this->belongsToMany(Partidas::class);
     }
 
     public function categorias()

@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('preguntas', function (Blueprint $table) {
+        Schema::create('preguntas_pasapalabras', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("id_usuario");
-            $table->string("pregunta");
-            $table->string("respuesta");
-            $table->foreignId("id_categoria");
             $table->timestamps();
+            $table->foreignId("id_usuario");
+            $table->foreignId("id_pasapalabra");
+            $table->foreignId("id_pregunta");
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('id_categoria')->references('id')->on('categorias')->onDelete('cascade');
+            $table->foreign('id_pasapalabra')->references('id')->on('pasapalabras')->onDelete('cascade');
+            $table->foreign('id_pregunta')->references('id')->on('preguntas')->onDelete('cascade');
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('preguntas');
+        Schema::dropIfExists('preguntas_pasapalabras');
     }
 };
