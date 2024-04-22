@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categorias;
+use App\Models\Categoria;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class CategoriasController extends Controller
 {
@@ -12,7 +15,8 @@ class CategoriasController extends Controller
      */
     public function index()
     {
-        //
+        $categorias= Categoria::all();
+        return Inertia::render("Categoria", ['categorias' => $categorias]);
     }
 
     /**
@@ -26,23 +30,32 @@ class CategoriasController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request) :RedirectResponse
     {
-        //
+    
+        Categoria::create(
+        $request->validate([
+            'nombre_categoria' => 'required|string|max:255',
+            'id_usuario' => 'required'
+            ])
+        );
+    
+        return to_route('categoria.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Categorias $categorias)
+    public function show(Categoria $categorias)
     {
         //
     }
 
+   
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Categorias $categorias)
+    public function edit(Categoria $categorias)
     {
         //
     }
@@ -50,7 +63,7 @@ class CategoriasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Categorias $categorias)
+    public function update(Request $request, Categoria $categorias)
     {
         //
     }
@@ -58,7 +71,7 @@ class CategoriasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Categorias $categorias)
+    public function destroy(Categoria $categorias)
     {
         //
     }

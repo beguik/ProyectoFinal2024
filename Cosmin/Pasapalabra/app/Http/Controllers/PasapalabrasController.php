@@ -13,6 +13,7 @@ class PasapalabrasController extends Controller
     public function index()
     {
         //
+        
     }
 
     /**
@@ -29,6 +30,8 @@ class PasapalabrasController extends Controller
     public function store(Request $request)
     {
         //
+        
+                    
     }
 
     /**

@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string("nombre_categoria")->unique();
             $table->timestamps();
+            $table->foreignId("id_usuario");
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

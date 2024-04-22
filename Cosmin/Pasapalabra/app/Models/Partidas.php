@@ -10,12 +10,12 @@ class Partidas extends Model
 {
     use HasFactory;
 
-    public function user()
+    public function partidas_user()
     {
         return $this->belongsTo(User::class);
     }
     
-    public function events(): HasMany
+    public function partidas_preguntas(): HasMany
     {
         return $this->hasMany(Preguntas::class);
     }

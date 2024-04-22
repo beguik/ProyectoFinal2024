@@ -45,9 +45,13 @@ class User extends Authenticatable
         ];
     }
 
-    public function events(): HasMany
+    public function user_partidas(): HasMany
     {
         return $this->hasMany(Partidas::class);
+    }
+    public function user_categorias(): HasMany
+    {
+        return $this->hasMany(Categoria::class);
     }
 
 

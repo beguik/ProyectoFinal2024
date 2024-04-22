@@ -9,7 +9,7 @@ export default function Dashboard({ auth }) {
     const user = (auth) => {
         return auth.name;
     };
-
+    console.log(auth)
     return (
         <AuthenticatedLayout
             user={auth.user}
@@ -24,11 +24,20 @@ export default function Dashboard({ auth }) {
                             <img className='w-1/6' src={asset('icono_p.png')} alt="icono de un rosco de pasapalabras" />
                             <h3>Insertar preguntas</h3>
                             <Link className='px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150'
-                                href={route('partida')}
+                                href={route('pregunta.index')}
                             >
                              +
                             </Link>
 
+                        </div>
+                        <hr />
+                        <div className="p-6 text-gray-900 flex flex-col items-center">
+                            <h3>Añadir categoría</h3>
+                            <Link className='px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150'
+                                href={route('categoria.index')}
+                            >
+                             {'->'}
+                            </Link>
                         </div>
                         <hr />
                         <div className="p-6 text-gray-900 flex flex-col items-center">
@@ -39,7 +48,6 @@ export default function Dashboard({ auth }) {
                              {'<-'}
                             </Link>
                         </div>
-                        <hr />
                     </div>
                 </div>
             </div>

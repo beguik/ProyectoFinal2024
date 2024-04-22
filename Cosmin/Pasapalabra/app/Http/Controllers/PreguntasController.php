@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Preguntas;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class PreguntasController extends Controller
 {
@@ -12,7 +13,7 @@ class PreguntasController extends Controller
      */
     public function index()
     {
-        //
+        return Inertia::render("Pregunta");
     }
 
     /**
@@ -28,7 +29,20 @@ class PreguntasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        dd($request);
+        /*
+        $validated = $request->validate([
+            'pregunta' => 'required|string|max:255',
+            'respuesta' => 'required|string|max:255',
+            'letra' => 'required|string|max:1',
+            'posicion' => 'required'
+
+            ]);
+
+        $request->user()->pregunta()->create($validated);
+            return redirect(route('pregunta.index')); 
+        */
     }
 
     /**

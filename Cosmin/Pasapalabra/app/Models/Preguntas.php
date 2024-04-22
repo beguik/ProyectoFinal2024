@@ -9,14 +9,14 @@ class Preguntas extends Model
 {
     use HasFactory;
 
-    public function partidas()
+    public function preguntas_partidas()
     {
         return $this->belongsToMany(Partidas::class);
     }
 
-    public function categorias()
+    public function preguntas_categorias()
     {
-        return $this->hasOne(Categorias::class);
+        return $this->hasOne(Categoria::class);
     }
     
     protected $fillable = [

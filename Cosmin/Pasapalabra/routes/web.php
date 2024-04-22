@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoriasController;
+use App\Http\Controllers\PreguntasController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -18,13 +20,16 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/formPreguntas', function () {
-    return Inertia::render('FormPreguntas');
-})->middleware(['auth', 'verified'])->name('form_preguntas');
 
-Route::get('/partida', function () {
-    return Inertia::render('Partida');
-})->middleware(['auth', 'verified'])->name('partida');
+
+Route::resource('pregunta', PreguntasController::class)
+->only(['index', 'store', 'edit', 'update', 'destroy'])
+->middleware(['auth', 'verified']); 
+
+Route::resource('categoria', CategoriasController::class)
+->only(['index','show', 'store', 'edit', 'update', 'destroy'])
+->middleware(['auth']);
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
