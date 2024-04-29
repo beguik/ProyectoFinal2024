@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var registroBtn = document.getElementById('registro');
     var volverBtn = document.getElementById('volver');
     var festividadesBtn = document.getElementById('festividades');
+    var historiaBtn = document.getElementById('historia');
 
     if (divLogo) {
         divLogo.addEventListener('click', function () {
@@ -35,6 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = 'festividades.php';
     });
 
+    historiaBtn.addEventListener('click',function (){
+        window.location.href = 'historia.php';
+    });
+
 })
 function mostrarMenu() {
     var divsPequeños = document.querySelector('.menu');
@@ -56,3 +61,5 @@ function mostrarMenu() {
         }
     }
 }
+
+

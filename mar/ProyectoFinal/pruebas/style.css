@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+}
+.menu {
+    background-color: #7aafff;
+    height: 60px;
+    width: 100%;
+    border: 0;
+}
+.menu div {
+    display: flex;
+    margin: 0 auto;
+    width: 800px;
+    height: 100%;
+}
+.menu div h1, .menu div a {
+    display: inline-flex;
+    align-items: center;
+}
+.menu div h1 {
+    flex: 1;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    color: #ebedee;
+    font-weight: normal;
+}
+.menu div a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #c4c8cc;
+    font-weight: bold;
+}
+.menu div a i {
+    padding: 2px 8px 0 0;
+}
+.menu div a:hover {
+    color: #ebedee;
+}
+.content {
+    width: 800px;
+    margin: 0 auto;
+}
+.content h2 {
+    margin: 0;
+    padding: 25px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #ebebeb;
+    color: #ffffff;
+}
+ /* dias de la semana color*/
+#calendar > div.fc-view-harness.fc-view-harness-active > div > table > thead > tr > th > div > div > table > thead > tr{
+    background-color: #c2c8ffe8; 
+    margin: 5px; 
+    text-align: center; 
+    font-style: oblique;
+}
+
+/* Estilos para el contenedor del calendario */
+#calendar-container {
+    position: relative;
+}
+
+.calendar-container-small {
+    max-width: 800px; /* Define el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+
+/* Estilos para el div de información del evento */
+#eventInfo {
+    background-color: #ffffff;
+    color: #275497;
+    padding: 10px;
+    margin-top:25%;
+    border-radius: 5px;
+    position: absolute;
+    left: -450px; /* Ajusta el valor según sea necesario para posicionarlo a la izquierda */
+    top: 0;
+    height: 300px;
+    width: 380px; /* Ancho del div de información del evento */
+}
+
+/* .fc-event:hover {
+    cursor: url('cursor.png'), auto;
+} */
+
+#calendar {
+    cursor: default; /* Establece el cursor como el cursor predeterminado (normal) */
+}

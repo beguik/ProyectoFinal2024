@@ -42,22 +42,27 @@
 
     <div class="containerGrande">
         <div class="logo" id="logo">
-            <img src="logo.png" alt="logotipo MalaApp">
+            <img src="./logoBoqueroncio.png" alt="logotipo MalaApp">
         </div>
 
         <div class="menu">
             <div class="festividades" id="festividades" type='button'>
                 <h5>Festividades</h5>
             </div>
-            <div class="historia" id="historia">
+            
+            <div class="historia" id="historia" type='button'>
                 <h5>Historia</h5>
             </div>
 
-            <div class="opcion" id="opcion">
+            <div class="rutas" id="rutas" type='button'>
+                <h5>Rutas</h5>
+            </div>
+
+            <div class="opcion" id="opcion" type='button'>
                 <h5>Saber Más</h5>
             </div>
 
-            <div class="juego" id="juego">
+            <div class="juego" id="juego" type='button'>
                 <h5>Juego del <br>Boquerón</h5>
             </div>
         </div>

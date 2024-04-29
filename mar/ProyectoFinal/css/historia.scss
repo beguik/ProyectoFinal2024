@@ -1,0 +1,170 @@
+$alineacion:center;
+$posicion: flex;
+$max: 100%;
+
+@font-face {
+    font-family: 'Aladin';
+    src: url('/Aladin-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Viga';
+    src: url('/Viga-Regular.ttf') format('truetype');
+}
+
+body{
+  //  background: linear-gradient(to bottom, #4B3108, #A56D1C, #F1A055, #FFFFFF);
+    background-size: cover;
+    font-family: 'Viga', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo{
+
+    padding-top: 75px;
+    justify-content: $alineacion;
+    display: $posicion;
+
+}
+
+.titulo > h1{
+    font-family: 'Aladin';
+    font-size: 700%;
+    color: #56390D;
+     -webkit-text-stroke: 1px black;
+    text-stroke: 1px black;
+    animation: aparecer 5s forwards;
+    opacity: 0;
+} 
+
+.titulo {
+    position: relative;
+}
+@keyframes aparecer {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 2;
+    }
+}
+
+.logo{
+    background-color: rgba(209, 171, 127, 0.192);
+    border-radius: $max;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 20%;
+    left: 25px;
+}
+
+.logo:hover {
+    background-color: rgba(155, 106, 41, 0.377);
+    border:2px solid rgb(100, 69, 34);
+}
+
+.logo > img{
+    margin-left: 25%;
+    width: 60%;
+    height: 70%;
+    margin-top: -10%;
+}
+
+.logo > h5{
+    width: 93px;
+    height: 20px;
+    margin-top: 24%;
+    margin-bottom: -5%;
+    margin-left: 8%;
+    color: white;
+    transform: rotate(-45deg);
+    background: linear-gradient(to right, #A19BE7 0%, #A19BE7 50%, #89B6C4 50%, #218D2C 100%);
+}
+
+
+.contenido{
+    text-align: justify;
+    justify-content: $alineacion;
+    display: $posicion;
+}
+
+.contenido > h4{
+    color: #000000;
+    text-align: center;
+    font-size: large;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-top: 100px;
+}
+
+.usuario{
+    padding-top: 10px;
+    text-align: center;
+    background-color: #cc9b6380;
+    border-bottom:solid 2px #5b340080 ;
+}
+
+/* Estilos para el botón */
+#boton {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    padding: 10px 20px;
+    margin-top: 40px;
+    background-color: #c0871e81;
+    color: white;
+    border: none;
+    height: 70px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el menú lateral */
+  #menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Ocultar el menú por defecto */
+  #menu.hidden {
+    transform: translateX(100%);
+  }
+  
+  /* Estilos para la lista de opciones del menú */
+  #menu ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 30%;
+    padding-left: 10%;
+  }
+  
+  #menu ul li {
+    margin-bottom: 30px;
+  }
+  
+  #menu ul li a:hover {
+    color: #ffc355;
+    cursor: pointer;
+  }
+
+  #menu ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+/* Estilos para el contenido */
+
+#map {
+    width: 800px;
+    height: 500px;
+}

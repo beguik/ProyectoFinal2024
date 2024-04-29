@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Aladin";
   src: url("/Aladin-Regular.ttf") format("truetype");
@@ -6,48 +7,32 @@
   font-family: "Viga";
   src: url("/Viga-Regular.ttf") format("truetype");
 }
-.festividades {
-  background-image: url("./img/fondo2.jpg");
+body {
+  background: linear-gradient(to top, #004B5B, #1e9ac0, #FFFFFF);
   background-size: cover;
-  font-family: "Viga";
+  font-family: "Viga", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .titulo {
-  padding-top: 50px;
+  padding-top: 75px;
   justify-content: center;
   display: flex;
 }
 
 .titulo > h1 {
   font-family: "Aladin";
-  font-size: 400%;
-  color: aliceblue;
+  font-size: 700%;
+  color: #A19BE7;
+  -webkit-text-stroke: 1px black;
+  text-stroke: 1px black;
   animation: aparecer 5s forwards;
   opacity: 0;
 }
 
 .titulo {
   position: relative;
-}
-
-#juego {
-  position: absolute;
-  top: -21%;
-  right: 20px;
-}
-
-#juego > img {
-  width: 270px;
-  height: 240px;
-  text-align: center;
-  transition: width 0.3s ease, height 0.3s ease;
-}
-
-#juego > img:hover {
-  width: 320px;
-  height: 300px;
 }
 
 @keyframes aparecer {
@@ -59,7 +44,7 @@
   }
 }
 .logo {
-  background-color: rgba(98, 137, 182, 0.192);
+  background-color: rgba(127, 165, 209, 0.192);
   border-radius: 100%;
   width: 250px;
   height: 250px;
@@ -74,6 +59,152 @@
 }
 
 .logo > img {
-  width: 100%;
+  margin-left: 25%;
+  width: 60%;
+  height: 70%;
+  margin-top: -10%;
+}
+
+.logo > h5 {
+  width: 93px;
+  height: 20px;
+  margin-top: 24%;
+  margin-bottom: -5%;
+  margin-left: 8%;
+  color: white;
+  transform: rotate(-45deg);
+  background: linear-gradient(to right, #A19BE7 0%, #A19BE7 50%, #89B6C4 50%, #218D2C 100%);
+}
+
+.contenido {
+  text-align: justify;
+  justify-content: center;
+  display: flex;
+}
+
+.contenido > h4 {
+  color: #004B5B;
+  text-align: center;
+  font-size: large;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  margin-top: 100px;
+}
+
+.usuario {
+  padding-top: 10px;
+  text-align: center;
+  background-color: rgba(99, 185, 204, 0.5019607843);
+  border-bottom: solid 2px rgba(0, 74, 91, 0.5019607843);
+}
+
+/* Estilos para el botón */
+#boton {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  padding: 10px 20px;
+  margin-top: 40px;
+  background-color: rgba(30, 154, 192, 0.5058823529);
+  color: white;
+  border: none;
+  height: 70px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Estilos para el menú lateral */
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
   height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ocultar el menú por defecto */
+#menu.hidden {
+  transform: translateX(100%);
+}
+
+/* Estilos para la lista de opciones del menú */
+#menu ul {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 30%;
+  padding-left: 10%;
+}
+
+#menu ul li {
+  margin-bottom: 30px;
+}
+
+#menu ul li a:hover {
+  color: #55d7ff;
+  cursor: pointer;
+}
+
+#menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilos para el contenido */
+#container, #containerAbajo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  color: aliceblue;
+}
+
+#containerAbajo {
+  margin-bottom: 120px;
+}
+
+#anuncio1 {
+  float: left;
+  width: 30%;
+  margin-left: 5%;
+}
+
+#anuncio2 {
+  margin-right: 10%;
+  float: left;
+}
+
+#anuncio2 > img {
+  width: 1000px;
+  height: 250px;
+}
+
+#contenidoGrande {
+  margin-left: 8%;
+  margin-right: 15%;
+  text-align: justify;
+}
+
+#contenidoGrande > p {
+  font-size: 20px;
+}
+
+#juego {
+  margin-right: -70px;
+}
+
+#juego > img:not(#anuncio2 > img) {
+  width: 270px;
+  height: 240px;
+  text-align: center;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+#juego > img:not(#anuncio2 > img):hover {
+  width: 320px;
+  height: 300px;
 }/*# sourceMappingURL=paginas.css.map */
